@@ -1,0 +1,99 @@
+{
+  "name": "BbongcarDesktop",
+  "version": "1.0.0",
+  "description": "Setting Sass",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "dev": "set NODE_ENV=development&&gulp",
+    "release": "set NODE_ENV=production&&gulp build",
+    "serve": "node app.js",
+    "live": "gulp browser-sync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/bemycar/tobe.html.www.bbongcar.co.kr.git"
+  },
+  "author": "leeheewon",
+  "license": "CPDL",
+  "copyright": "(주)비마이카",
+  "serve": {
+    "port": {
+      "live": 25530,
+      "development": 7200,
+      "production": 80
+    }
+  },
+  "paths": {
+    "SRC": {
+      "RESOURCES": "./_src",
+      "SCSS": "./_src/sass",
+      "IMAGES": "./_src/images",
+      "JS": "./_src/js",
+      "HTML": "./_src/html",
+      "VENDOR": "./_src/vendor"
+    },
+    "DEST": {
+      "RESOURCES": "./resources",
+      "JS": "./resources/js",
+      "CSS": "./resources/css",
+      "IMAGES": "./resources/images",
+      "HTML": "./html",
+      "VENDOR": "./resources/vendor"
+    }
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-proto-to-assign": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "cool-ascii-faces": "^1.3.4",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
+    "git-rev-sync": "^1.9.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-changed": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.0.1",
+    "gulp-filter": "^5.0.1",
+    "gulp-header": "^1.8.9",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-inject": "^4.3.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-print": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "gutil": "^1.6.4",
+    "gutil-color-log": "^1.0.2",
+    "moment": "^2.19.3",
+    "nodemon": "^1.12.1",
+    "opn": "^5.1.0",
+    "path": "^0.12.7",
+    "phantomjs-prebuilt": "^2.1.15",
+    "prompt-list": "^3.1.1",
+    "pump": "^2.0.0",
+    "raw-loader": "^0.5.1",
+    "run-sequence": "^2.2.0",
+    "ts-loader": "^3.1.1",
+    "tslint": "^5.8.0",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.6.1",
+    "typings": "^2.1.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "serve-static": "^1.13.1"
+  }
+}

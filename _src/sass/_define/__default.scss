@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@import 'mixin';
+@import 'base';
+@import 'form';
+@import 'sentence';
+
+/**
+  * Usage :
+  * {
+  *   @extend %variable;
+  * }
+***/
+
+
+%fontFamily {
+  font-family: 'Noto Sans KR', '맑은 고딕', 'Malgum Gothic', Sans-serif;
+}
+
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%textEllipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

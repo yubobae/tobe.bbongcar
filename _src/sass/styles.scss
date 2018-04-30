@@ -1,0 +1,1393 @@
+@charset "utf-8";
+
+@import '_define/_default';
+@import '_font/_default';
+@import 'buttons/_default';
+@import 'common/layout';
+@import 'component/common';
+
+/// 팝업 스타일
+.component_popup {
+
+  .popup_view_secret {
+    padding: 20px 50px 30px;
+
+    .text {
+      border: 1px solid #222222;
+      line-height: 38px;
+      padding: 0 10px;
+    }
+
+  }
+
+  .popup_view_secret__function {
+    margin: 27px 0 0;
+
+    .submit {
+      width: 89px;
+    }
+  }
+
+  .popup_find_password {
+    padding: 20px 50px 30px;
+
+    .text {
+      border: 1px solid #222222;
+      box-sizing: border-box;
+      line-height: 38px;
+      padding: 0 10px;
+    }
+
+  }
+
+  .popup_find_password__function {
+    margin: 27px 0 0;
+
+    .text {
+      width: 100%;
+      vertical-align: top;
+
+      & + .text {
+        margin: 5px 0 0;
+      }
+    }
+
+  }
+
+  .popup_find_password__submit {
+    text-align: right;
+    margin: 20px 0 0;
+
+    .submit {
+      width: 89px;
+    }
+  }
+
+  .popup_support_login {
+    padding: 20px 50px 30px;
+  }
+
+  .popup_support_login__function {
+    margin: 27px 0 0;
+
+    &.form_group {
+      .button {
+        padding: 0 30px;
+      }
+    }
+  }
+
+}
+
+/// 고객센터 > FAQ 스타일
+.support_faq_category {
+  margin: 0 0 50px;
+
+  .list {
+    @extend %clearfix;
+    border-left: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+
+    li {
+      float: left;
+      box-sizing: border-box;
+      width: 20%;
+      text-align: center;
+      border-right: 1px solid #dedede;
+      border-bottom: 1px solid #dedede;
+
+      .link {
+        display: block;
+        box-sizing: border-box;
+        height: 158px;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: $noto-weight-regular;
+        padding: 104px 0 0;
+        background-position: center 40px;
+        background-repeat: no-repeat;
+      }
+
+      &.item01 {
+        .link {
+          background-image: url("#{$image-path}/support/bg_support_faq_01.png");
+        }
+      }
+
+      &.item02 {
+        .link {
+          background-image: url("#{$image-path}/support/bg_support_faq_02.png");
+        }
+      }
+
+      &.item03 {
+        .link {
+          background-image: url("#{$image-path}/support/bg_support_faq_03.png");
+        }
+      }
+
+      &.item04 {
+        .link {
+          background-image: url("#{$image-path}/support/bg_support_faq_04.png");
+        }
+      }
+
+      &.item05 {
+        .link {
+          background-image: url("#{$image-path}/support/bg_support_faq_05.png");
+        }
+      }
+
+      &.active {
+        background: #fd7e2d;
+        a {
+          color: #fff;
+        }
+      }
+
+    }
+  }
+}
+
+.support_faq_list {
+  .folder_type02 {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+/// 회원가입하기
+.etc_member_login {
+
+  width: 822px;
+  margin: 0 auto;
+  border: 1px solid #dedede;
+
+}
+
+.etc_member_login__bar {
+  background: #333333;
+
+  .blank {
+    display: block;
+    width: 189px;
+    height: 4px;
+    background: #ff6000;
+  }
+}
+
+.etc_member_login__default {
+  @extend %clearfix;
+
+  padding: 56px 40px 60px;
+  border-bottom: 1px solid #dedede;
+
+  > .side_left {
+    float: left;
+    width: 360px;
+  }
+
+  > .side_right {
+    float: right;
+    width: 330px;
+  }
+}
+
+.etc_member_login__default__login {
+
+}
+
+.etc_member_login__default__login__headline {
+  color: #333333;
+  font-size: 34px;
+  font-weight: $noto-weight-regular;
+
+}
+
+.etc_member_login__default__login__description {
+  margin: 15px 0 0;
+  color: #333333;
+  font-size: 13px;
+}
+
+.etc_member_login__default__login__form {
+  @extend %clearfix;
+
+  position: relative;
+  margin: 29px 0 0;
+
+  > .field {
+    position: relative;
+    float: left;
+    margin: 0 15px 0 0;
+    width: 360px;
+
+    .id {
+      padding: 0 0 0 29px;
+      background: url("#{$image-path}/member/bg_etc_member_login_default_form_01.png") no-repeat left top;
+
+      .text {
+        border: 1px solid #aeaeae;
+        width: 255px;
+        line-height: 23px;
+      }
+    }
+
+    .pw {
+      margin: 9px 0 0;
+      padding: 0 0 0 29px;
+      background: url("#{$image-path}/member/bg_etc_member_login_default_form_02.png") no-repeat left top;
+
+      .text {
+        border: 1px solid #aeaeae;
+        width: 255px;
+        line-height: 23px;
+      }
+    }
+
+    .optional {
+      @extend %clearfix;
+
+      margin: 14px 0 0;
+
+      .side_left {
+        float: left;
+        padding: 0 0 0 29px;
+
+        .check {
+          vertical-align: middle;
+        }
+
+        .label {
+          color: #333333;
+          font-size: 10px;
+        }
+      }
+
+      .side_right {
+        float: right;
+
+        .link {
+          color: #333333;
+          font-size: 10px;
+        }
+      }
+    }
+
+  }
+
+  > .submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .submit {
+      display: block;
+      width: 60px;
+      height: 60px;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: $noto-weight-regular;
+      background: #514f50;
+      letter-spacing: -1px;
+      text-align: center;
+    }
+  }
+}
+
+.etc_member_login__default__signup {
+
+}
+
+.etc_member_login__default__signup__headline {
+  color: #333333;
+  font-size: 30px;
+  font-weight: $noto-weight-light;
+}
+
+.etc_member_login__default__signup__container {
+  margin: 18px 0 0;
+
+  .headline {
+    color: #333333;
+    font-size: 13px;
+    line-height: 20px;
+    border-bottom: 1px solid #333333;
+    margin: 0 0 26px;
+  }
+
+  .division {
+    @extend %clearfix;
+
+    .side_left {
+      float: left;
+      width: 160px;
+      color: #333333;
+      font-size: 12px;
+      line-height: 15px;
+      padding: 3px 0 0;
+    }
+
+    .side_right {
+      float: right;
+      width: 133px;
+
+      .button {
+        display: block;
+        font-size: 14px;
+        font-weight: $noto-weight-regular;
+        color: #333333;
+        border: 1px solid #dedede;
+      }
+    }
+
+  }
+}
+
+.etc_member_login__default__signup__description {
+
+  margin: 18px 0 0;
+
+  .paragraph {
+    color: #333333;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -1px;
+
+    .link {
+      text-decoration: underline;
+    }
+
+  }
+
+}
+
+.etc_member_login__sns {
+  padding: 26px 40px 49px;
+}
+
+.etc_member_login__sns__headline {
+  color: #333333;
+  font-size: 20px;
+  font-weight: $noto-weight-regular;
+}
+
+.etc_member_login__sns__kinds {
+  @extend %clearfix;
+  margin: 20px 0 0;
+
+  .list {
+    margin: -20px 0 0 -20px;
+
+    li {
+      width: 360px;
+      float: left;
+      margin: 20px 0 0 20px;
+
+      .button {
+
+        display: block;
+        font-size: 17px;
+        line-height: 50px;
+        color: #fff;
+        letter-spacing: -1px;
+        text-align: center;
+
+        span {
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-position: left center;
+          padding: 0 0 0 33px;
+        }
+
+        &.naver {
+          background-color: #4cc935;
+          span {
+            background-image: url("#{$image-path}/member/bg_etc_member_login_sns_kinds_01.png");
+          }
+
+          &:hover {
+            //background-color:#34b61d;
+          }
+        }
+
+        &.facebook {
+          background-color: #536fac;
+          span {
+            background-image: url("#{$image-path}/member/bg_etc_member_login_sns_kinds_02.png");
+          }
+
+          &:hover {
+            //background-color:#193a83;
+          }
+        }
+
+        &.kakaotalk {
+          background-color: #fbe733;
+          span {
+            background-image: url("#{$image-path}/member/bg_etc_member_login_sns_kinds_03.png");
+          }
+
+          &:hover {
+            //background-color:#bfae10;
+          }
+        }
+
+        &.googleplus {
+          background-color: #da1e12;
+          span {
+            background-image: url("#{$image-path}/member/bg_etc_member_login_sns_kinds_04.png");
+          }
+
+          &:hover {
+            //background-color:#a3130a;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+/// 회원등록하기
+.etc_member_register {
+
+}
+
+.etc_member_register__policy {
+  margin: 35px 0 0;
+}
+
+.etc_member_register__policy__container {
+  background: #fbfbfb;
+  border: 1px solid #dedede;
+  margin: 0 0 30px;
+
+  .check_function {
+    border-bottom: 1px solid #dedede;
+    color: #333333;
+    font-size: 13px;
+    font-weight: $noto-weight-regular;
+    padding: 18px 20px 18px 20px;
+  }
+
+  .policy_box {
+    @extend %clearfix;
+    padding: 20px 20px;
+    border-bottom: 1px solid #dedede;
+
+    .policy {
+
+      float: left;
+      width: 505px;
+
+      .headline {
+        color: #333333;
+        font-size: 13px;
+        font-weight: $noto-weight-regular;
+        margin: 0 0 14px;
+      }
+
+      .content {
+        height: 153px;
+        color: #333333;
+        font-size: 13px;
+        line-height: 19px;
+        overflow: hidden;
+        overflow-y: scroll;
+        padding: 0 0 0 12px;
+      }
+
+      .check {
+        margin: 15px 0 0;
+        font-size: 13px;
+        color: #333333;
+
+        .label {
+          margin: 0 0 0 15px;
+        }
+      }
+
+    }
+
+    .private {
+
+      float: right;
+      width: 505px;
+
+      .headline {
+        color: #333333;
+        font-size: 13px;
+        line-height: 19px;
+        font-weight: $noto-weight-regular;
+        margin: 0 0 10px;
+      }
+
+      .content {
+        height: 153px;
+        color: #333333;
+        font-size: 13px;
+        line-height: 19px;
+        overflow: hidden;
+        overflow-y: scroll;
+        padding: 0 0 0 12px;
+      }
+
+      .check {
+        margin: 15px 0 0;
+        font-size: 13px;
+        color: #333333;
+
+        .label {
+          margin: 0 0 0 15px;
+        }
+      }
+
+    }
+
+  }
+
+  .policy_optional {
+
+    padding: 18px 20px 25px;
+
+    .headline {
+      color: #333333;
+      font-size: 13px;
+      font-weight: $noto-weight-regular;
+    }
+
+    .content {
+      color: #333333;
+      font-size: 13px;
+      line-height: 16px;
+      padding: 20px 10px 20px;
+    }
+
+    .check {
+      margin: 0 0 0;
+      font-size: 13px;
+      color: #333333;
+
+      .label {
+        margin: 0 0 0 15px;
+      }
+    }
+
+  }
+}
+
+.etc_member_register__function {
+
+  .button {
+    min-width: 110px;
+    margin: 0 0 0 15px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+
+/// 마이페이지
+.mypage_reservation_list {
+  margin: 0 0 45px;
+  padding: 0 0 45px;
+  border-bottom: 1px solid #dedede;
+}
+
+.mypage_member_information {
+  margin: 0 0 35px;
+}
+
+.mypage_policy_agree {
+  padding: 0 0 50px;
+  margin: 0 0 34px;
+  border-bottom: 1px solid #dedede;
+
+}
+
+.mypage_policy_agree__function {
+  margin: 30px 0 0;
+
+  .button {
+    min-width: 110px;
+    margin: 0 0 0 15px;
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+
+.mypage_save_gold {
+  margin: 0 0 43px;
+}
+
+.mypage_coupon {
+  margin: 0 0 37px;
+  padding: 0 0 50px;
+  border-bottom: 1px solid #dedede;
+}
+
+.mypage_coupon__list {
+  @extend %clearfix;
+
+  li {
+    float: left;
+    width: 190px;
+    text-align: center;
+    margin: 0 0 0 30px;
+    color: #888888;
+    font-size: 12px;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      color: #888888;
+      font-size: 12px;
+    }
+
+    .image {
+      display: block;
+    }
+
+    .date {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
+
+  }
+}
+
+.mypage_mycard__list {
+  @extend %clearfix;
+
+  li {
+    float: left;
+    width: 110px;
+    text-align: center;
+    margin: 0 0 0 30px;
+    color: #888888;
+    font-size: 12px;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      color: #888888;
+      font-size: 12px;
+    }
+
+    .image {
+      display: block;
+    }
+
+    .name {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
+
+  }
+}
+
+.reservation_form__header {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  background: #ff6000;
+}
+
+.reservation_form__header__wrapper {
+  @extend %clearfix;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.reservation_form__header__label {
+  float: left;
+  margin: 0 30px 0 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: $noto-weight-regular;
+  line-height: 60px;
+}
+
+.reservation_form__header__start,
+.reservation_form__header__end {
+  float: left;
+
+  > .select {
+    float: left;
+    margin: 15px 0 15px 11px;
+    padding: 0 15px 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &.date {
+      background: #c7c7c7;
+    }
+
+    &.time {
+      background: #ffffff;
+    }
+
+    .label {
+      float: left;
+      color: #333333;
+      font-size: 13px;
+      line-height: 30px;
+    }
+
+    select {
+      background: transparent;
+      font-size: 13px;
+      height: 30px;
+      line-height: 30px;
+    }
+
+  }
+
+}
+
+.reservation_form__header__end {
+  background: url("#{$image-path}/layout/bg_reservation_form_header_01.png") no-repeat left center;
+  margin: 0 0 0 30px;
+  padding: 0 0 0 33px;
+}
+
+.reservation_form__header__submit {
+  float: left;
+
+  .button {
+    margin: 15px 0 0 30px;
+    color: #ff6000;
+    font-size: 14px;
+    font-weight: $noto-weight-medium;
+    line-height: 30px;
+    background: #fff;
+    padding: 0 20px;
+  }
+
+}
+
+.reservation_form__body {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.reservation_form__body__row {
+  display: table-row;
+}
+
+.reservation_form__body__searchfield {
+  @extend %clearfix;
+
+  padding: 20px 0;
+  border-bottom: 1px solid #dedede;
+
+  .headline {
+    float: left;
+    color: #ed6728;
+    font-size: 18px;
+    font-weight: $noto-weight-regular;
+    padding: 0 20px 0;
+  }
+
+  .keyword {
+    float: left;
+    border: 1px solid #dedede;
+    background: url("#{$image-path}/ico/ico_map.png") no-repeat 25px center;
+    padding: 0 0 0 44px;
+
+    .text {
+      float: left;
+      color: #333333;
+      font-size: 13px;
+      line-height: 28px;
+      vertical-align: top;
+      width: 160px;
+    }
+
+    .submit {
+      width: 32px;
+      height: 28px;
+      border-left: 1px solid #dedede;
+      background: url("#{$image-path}/ico/ico_zoom_02.png") no-repeat center;
+
+      span {
+        display: block;
+        text-indent: -9999px;
+      }
+    }
+  }
+
+  .reset_locate {
+    float: left;
+    color: #333333;
+    font-size: 13px;
+    line-height: 30px;
+    margin: 0 0 0 15px;
+
+    span {
+      display: block;
+      background: url("#{$image-path}/ico/ico_refresh.png") no-repeat right center;
+      padding: 0 20px 0 0;
+    }
+  }
+
+}
+
+.reservation_form__body__select_car {
+  position: absolute;
+  top: 126px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  .search_field {
+    padding: 20px 20px 0 30px;
+
+    > .keyword {
+      position: relative;
+      border: 1px solid #dedede;
+
+      .text {
+        width: 100%;
+        color: #333333;
+        box-sizing: border-box;
+        line-height: 28px;
+        padding: 0 40px 0 15px;
+      }
+
+      .submit {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 32px;
+        height: 28px;
+        border-left: 1px solid #dedede;
+        background: url(/resources/images/ico/ico_zoom_02.png) no-repeat center;
+
+        span {
+          display: block;
+          text-indent: -9999px;
+        }
+      }
+
+    }
+
+    .type {
+      overflow: hidden;
+
+      .section {
+        margin: 10px 0 0;
+        position: relative;
+
+        &.side_left {
+          float: left;
+          width: 49%;
+        }
+
+        &.side_right {
+          float: right;
+          width: 49%;
+        }
+
+        .label {
+          display: block;
+          border: 1px solid #dedede;
+          background: #fff;
+          color: #333333;
+          font-size: 13px;
+          line-height: 28px;
+          text-align: center;
+        }
+
+        .radio {
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+
+          &:checked + label {
+            color: #fff;
+            background: #ff6000;
+            border-color: #ff6000;
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+  .result_container {
+
+  }
+
+  .result_container__list {
+
+  }
+
+  .result_container__list__section {
+    position: relative;
+    border-top: 1px solid #dedede;
+    padding: 0 0 0 0;
+    min-height: 80px;
+
+    .mark {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 27px;
+      height: 27px;
+      background: url("#{$image-path}/ico/ico_heart_01.png") no-repeat left top;
+
+      &.active {
+        background-position: left -28px;
+      }
+
+      span {
+        display: block;
+        text-indent: -9999px;
+      }
+
+    }
+
+    .link {
+      display: table;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+      text-decoration: none;
+      padding: 20px 20px;
+    }
+
+    .image {
+      display: table-cell;
+      width: 22%;
+      vertical-align: middle;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .information {
+      display: table-cell;
+      width: 78%;
+      vertical-align: middle;
+      padding: 0 70px 0 10px;
+
+      .areapoint {
+        display: block;
+        color: #888888;
+        font-size: 15px;
+        font-weight: $noto-weight-regular;
+      }
+
+      .time {
+        display: block;
+        color: #333333;
+        font-size: 13px;
+        font-weight: $noto-weight-regular;
+      }
+
+      .price {
+        display: block;
+        color: #ff6000;
+        font-size: 20px;
+        font-weight: $noto-weight-regular;
+      }
+
+    }
+
+    .function {
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      margin: -30px 0 0;
+
+      .button {
+        &.reserve {
+          color: #fff;
+          font-size: 15px;
+          font-weight: $noto-weight-regular;
+          line-height: 18px;
+          height: 60px;
+          background: #888888;
+          width: 60px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .result_container__category {
+    text-align: right;
+    color: #888888;
+    font-size: 13px;
+    font-weight: $noto-weight-regular;
+    padding: 0 20px 0 0;
+    margin: 30px 0 10px;
+
+    .button {
+      color: #888888;
+      background: url("#{$image-path}/common/bg_line_01.png") no-repeat left 5px;
+      padding: 0 0 0 13px;
+      margin: 0 0 0 7px;
+
+      &:first-child {
+        background: none;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.reservation_form__body__delivery {
+  @extend %clearfix;
+
+  color: #888888;
+  font-size: 13px;
+  line-height: 55px;
+  padding: 0 0 0 20px;
+
+  .title {
+    color: #333333;
+    font-size: 15px;
+    font-weight: $noto-weight-regular;
+    margin: 0 10px 0 0;
+    float: left;
+  }
+
+  .form {
+    float: left;
+
+    .label {
+      color: #333333;
+      font-size: 13px;
+    }
+
+    .description {
+      font-size: 13px;
+      letter-spacing: -1px;
+    }
+  }
+}
+
+.reservation_form__body__side_left {
+  position: relative;
+  display: table-cell;
+  width: 30%;
+  min-width: 460px;
+  border: 1px solid #dedede;
+
+  > .header_wrapping {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+}
+
+.reservation_form__body__side_right {
+  display: table-cell;
+  width: 70%;
+  vertical-align: top;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.product_detail_info {
+
+}
+
+.product_detail_info__container {
+  @extend %clearfix;
+
+  margin: 0 0 44px;
+
+  .side_left {
+    float: left;
+    width: 560px;
+  }
+
+  .side_right {
+    float: right;
+    width: 495px;
+  }
+
+  .detail_image {
+    border: 1px solid #dedede;
+
+    img {
+      width: 558px;
+      height: 313px;
+    }
+
+  }
+
+  .product_name {
+    color: #ff6000;
+    font-size: 20px;
+    font-weight: $noto-weight-regular;
+    margin: 0 0 15px;
+  }
+
+  .product_information {
+    color: #333333;
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 1px solid #dedede;
+    margin: 0 0 25px;
+    padding: 0 0 25px;
+
+    li {
+      margin: 14px 0 0;
+
+      &:first-child {
+        margin: 0;
+      }
+
+      &.emphasis {
+        color: #333333;
+        font-weight: $noto-weight-medium;
+      }
+
+      .orange {
+        color: #ff6000;
+      }
+    }
+  }
+
+  .delivery_locate {
+    font-size: 16px;
+    line-height: 20px;
+
+    .sector {
+      margin: 15px 0 0;
+
+      &:first-child {
+        margin: 0;
+      }
+
+    }
+
+    .form_group {
+
+      .button {
+        margin: 0 0 0 7px;
+      }
+
+    }
+  }
+
+  .insurance {
+    @extend %clearfix;
+    margin: 15px 0 0;
+
+    .label {
+      float: left;
+      margin: 0 15px 0 0;
+      color: #333333;
+      font-size: 15px;
+      font-weight: $noto-weight-regular;
+    }
+
+    .value {
+      float: left;
+      font-size: 13px;
+
+      .label {
+        color: #333333;
+        font-size: 13px;
+      }
+
+      .description {
+        color: #888888;
+        letter-spacing: -1px;
+      }
+    }
+
+  }
+
+}
+
+.product_detail_pickup_locate {
+  margin: 0 0 44px;
+}
+
+.product_detail_pickup_locate__map {
+  border: 1px solid #dedede;
+
+  > img {
+    width: 100%;
+  }
+}
+
+.product_detail_explanation {
+  margin: 0 0 44px;
+}
+
+.product_detail_explanation__list {
+  margin: 0 0 18px;
+
+  li {
+    color: #333333;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+}
+
+.product_detail_explanation__headline {
+  color: #111111;
+  font-size: 13px;
+  font-weight: $noto-weight-regular;
+  background: url("#{$image-path}/ico/ico_rect_02.png") no-repeat 3px 9px;
+  padding: 0 0 0 12px;
+
+  .highlight {
+    color: #ff6000;
+  }
+}
+
+.product_detail_payment_info {
+  .component_table_function {
+    margin: 50px 0 0;
+  }
+}
+
+.my_favorite {
+  border: 1px solid #dedede;
+  padding: 30px 0 12px;
+}
+
+.my_favorite__headline {
+  color: #000000;
+  font-size: 24px;
+  font-family: Arial;
+  text-align: center;
+  margin: 0 0 25px;
+
+  .emphasis {
+    font-weight: bold;
+  }
+
+}
+
+.my_favorite__container__list {
+  @extend %clearfix;
+  text-align: center;
+
+  .section {
+    position: relative;
+    width: 326px;
+    height: 323px;
+    float: left;
+    border: 1px solid #dedede;
+    padding: 30px 0 27px;
+    margin: 0 0 28px 28px;
+    text-align: center;
+
+    .mark {
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      width: 32px;
+      height: 32px;
+
+      &.like {
+        background: url("#{$image-path}/ico/ico_heart_02.png") no-repeat left top;
+      }
+
+      &.active {
+        background-position: 0 -32px;
+      }
+
+      span {
+        display: block;
+        text-indent: -9999px;
+      }
+
+    }
+
+    .link {
+      display: block;
+      text-decoration: none;
+      margin: 0 0 13px;
+
+      .image {
+        display: block;
+        margin: 0 0 15px;
+      }
+
+      .information {
+        display: block;
+        font-family: Dotum;
+
+        .areapoint {
+          display: block;
+          margin: 0 0 8px;
+          color: #222222;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        .time {
+          display: block;
+          color: #888888;
+          margin: 0 0 6px;
+          font-size: 11px;
+        }
+
+        .price {
+          display: block;
+          color: #ff6000;
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+      }
+    }
+
+    .function {
+      text-align: center;
+
+      .reserve {
+        color: #888888;
+        font-size: 12px;
+        line-height: 26px;
+        letter-spacing: -1px;
+      }
+    }
+  }
+
+}

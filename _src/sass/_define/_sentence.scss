@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+$image-path : '/resources/images';
+
+$body-min-width : 1100px;
+
+/// Notosans Font weight
+$noto-weight-thin : 100;
+$noto-weight-light : 300;
+$noto-weight-regular : 400;
+$noto-weight-medium : 500;
+$noto-weight-bold : 700;
+
+%base_body_font {
+  font-size: 15px;
+  font-family: "Noto Sans KR";
+  font-weight: $noto-weight-light;
+  line-height: normal;
+}

@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+.form_group {
+
+  .button {
+    min-width: 51px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    padding: 0 16px;
+    font-size: 15px;
+    font-weight: $noto-weight-regular;
+    line-height: 38px;
+    color: #888888;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+
+    span {
+      display: inline-block;
+    }
+
+    &.anchor { /// 우측 화살표
+      span {
+        background: url("#{$image-path}/common/bg_button_anchor.png") no-repeat right center;
+        padding: 0 10px 0 0;
+      }
+    }
+
+    &.pencil { /// 좌측 연필
+      span {
+        background: url("#{$image-path}/common/bg_button_pencil.png") no-repeat left center;
+        padding: 0 0 0 19px;
+      }
+    }
+
+    &.orange { /// 오렌지색 배경
+      background: #ff6000;
+      border-color: #ff6000;
+      color: #fff;
+    }
+
+    &.grey { /// 회색 배경
+      background: #888888;
+      border-color: #888888;
+      color: #fff;
+    }
+
+    &.lightgrey { /// 회색 배경
+      background: #c2c2c2;
+      border-color: #c2c2c2;
+      color: #fff;
+    }
+
+    &.blackborder { /// 흰색배경 검은색 보더
+      background: #ffffff;
+      border-color: #222222;
+      color: #222222;
+    }
+
+    &.greyborder { /// 흰색배경 회색 보더
+      background: #ffffff;
+      border-color: #888888;
+      color: #888888;
+    }
+
+  }
+
+  input[type=password],
+  input[type=text] {
+    border: 1px solid #dfdfdf;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 12px 0;
+  }
+
+  textarea {
+    border: 1px solid #dfdfdf;
+    padding: 15px 12px 15px;
+  }
+
+  select {
+    border: 1px solid #dfdfdf;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 12px 0;
+  }
+
+  &.size21 {
+
+    .button {
+      font-size: 12px;
+      line-height: 19px;
+      padding: 0 10px;
+    }
+
+    input.text,
+    input[type=password],
+    input[type=text] {
+      height: 19px !important;
+      line-height: 19px !important;
+    }
+
+    select {
+      height: 21px;
+      line-height: 21px;
+    }
+  }
+
+  &.size36 {
+    .button {
+      font-size: 12px;
+      line-height: 34px;
+    }
+
+    input.text,
+    input[type=password],
+    input[type=text] {
+      height: 34px !important;
+      line-height: 34px !important;
+    }
+
+    select {
+      height: 36px;
+      line-height: 36px;
+    }
+  }
+
+  &.size50 {
+    .button {
+      font-size: 20px;
+      line-height: 48px;
+    }
+
+    input[type=password],
+    input[type=text] {
+      height: 48px;
+      line-height: 48px;
+    }
+
+    select {
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+
+}
+
+.radio_group {
+  @extend %clearfix;
+  position: relative;
+
+  input[type=radio] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+
+    & + label {
+
+      &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 21px;
+        height: 21px;
+        background: url("#{$image-path}/common/radio_01.png") no-repeat;
+        margin: 0 9px 0 0;
+      }
+
+    }
+
+    &:checked + label,
+    &:active + label {
+      &::before {
+        background-position: 0 -21px;
+      }
+    }
+
+  }
+
+  .radio_group__cell {
+    position: relative;
+    float: left;
+    margin: 0 0 0 46px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+
+.check_group {
+  @extend %clearfix;
+  position: relative;
+
+  &.inline {
+    vertical-align: top;
+    display: inline-block;
+
+    & + .text,
+    & + .label {
+      margin: 0 0 0 10px;
+    }
+
+  }
+
+  input[type=checkbox] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+
+    & + label {
+
+      &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 15px;
+        height: 15px;
+        margin: 0 5px 0 0;
+        background: url("#{$image-path}/common/check_01.png") no-repeat;
+      }
+
+    }
+
+    &:checked + label,
+    &:active + label {
+      &::before {
+        background-position: 0 -15px;
+      }
+    }
+
+  }
+
+}
