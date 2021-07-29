@@ -1,7 +1,5 @@
 # 뿅카 데스크탑 리뉴얼 퍼블리싱
 
-## 담당자
-- 이희원 (heewon.lee@bemycar.co.kr, 010-9014-5699).
 
 윈도우 환경에서 줄바꿈(new line)문자로 CR(Carrige-Return) LF(Line Feed)문자를 둘다 사용하기 때문에, git 글로벌 환경설정으로 아래와 같은 설정이 필요합니다.
 
